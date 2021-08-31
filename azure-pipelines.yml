@@ -7,6 +7,13 @@ trigger:
 - master
 
 pool:
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Visual Studio Enterprise Subscription – MPN - Bindu(28087d46-5924-472d-8b68-6856c28d0de5)'
+    appType: 'webApp'
+    WebAppName: 'demonetapp'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
   vmImage: ubuntu-latest
 
 variables:
