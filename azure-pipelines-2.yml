@@ -1,4 +1,11 @@
 # ASP.NET Core
+- task: AzureFunctionApp@1
+  inputs:
+    azureSubscription: 'Visual Studio Enterprise Subscription – MPN - Bindu(1)(28087d46-5924-472d-8b68-6856c28d0de5)'
+    appType: 'functionApp'
+    appName: 'testapp'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
 # Build and test ASP.NET Core projects targeting .NET Core.
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
