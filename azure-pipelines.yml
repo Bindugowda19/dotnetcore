@@ -13,6 +13,10 @@ pool:
     azureSubscription: 'Visual Studio Enterprise Subscription – MPN - Bindu(28087d46-5924-472d-8b68-6856c28d0de5)'
     appType: 'webApp'
     WebAppName: 'demonetapp'
+    deployToSlotOrASE: true
+    ResourceGroupName: 'demotest'
+    SlotName: 'production'
+    VirtualApplication: 'demoapplication'
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
   vmImage: ubuntu-latest
 
